@@ -1,9 +1,5 @@
 package gk.example.vaadin;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.inject.Singleton;
-
 import java.net.InetSocketAddress;
 import java.net.URL;
 import java.util.Arrays;
@@ -18,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import static com.google.common.base.Preconditions.checkState;
 
-@Singleton
+// no DI
 public class WebServer implements AutoCloseable {
 
   private static final Logger log = LoggerFactory.getLogger(WebServer.class);
@@ -29,15 +25,10 @@ public class WebServer implements AutoCloseable {
 
   private Server server; // jetty embedded web server
 
-  @Inject
   public WebServer(
-      @Named("config.host")
-      String host,
-      @Named("config.port")
-      int port
   ) {
-    this.host = host;
-    this.port = port;
+    this.host = "localhost";
+    this.port = 9092;
     this.productionMode = false;
   }
 
