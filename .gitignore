@@ -1,0 +1,14 @@
+
+# vim
+.*.swp
+
+# eclipse
+bin/
+.settings/
+.classpath
+.project
+
+# gradle
+build/
+.gradle/
+
