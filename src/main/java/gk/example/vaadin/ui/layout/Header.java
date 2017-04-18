@@ -9,14 +9,20 @@ public class Header extends HorizontalLayout {
 
   private static final long serialVersionUID = 20170324L;
 
-  Header() {
-    final Label l1 = new Label("Header");
+  private final Label title;;
 
-    addComponent(l1);
+  Header() {
+    this.title = new Label("Header");
+
+    addComponent(title);
 
     setWidth("100%");
 
-    setExpandRatio(l1, 1.0f);
+    setExpandRatio(title, 1.0f);
+  }
+
+  public void setTitle(String text) {
+    this.title.setValue(text);
   }
 
 }
