@@ -1,0 +1,23 @@
+@import "../valo/valo.scss";
+
+@mixin web {
+  @include valo;
+
+  /* Add your theme selectors here */
+
+  /* GridLayout spacing */
+  $padding_small: 10px;
+  .wa-margin.v-gridlayout-margin-top {
+    padding-top: $padding_small;
+  }
+  .wa-margin.v-gridlayout-margin-bottom {
+    padding-bottom: $padding_small;
+  }
+  .wa-margin.v-gridlayout-margin-left {
+    padding-left: $padding_small;
+  }
+  .wa-margin.v-gridlayout-margin-right {
+    padding-right: $padding_small;
+  }
+
+}
